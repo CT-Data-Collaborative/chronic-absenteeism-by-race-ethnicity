@@ -1,7 +1,5 @@
 Chronic-Absenteeism-by-Race-Ethnicity
 
-[![Build Status](https://travis-ci.org/CT-Data-Collaborative/chronic-absenteeism-by-race-ethnicity.svg?branch=master)](https://travis-ci.org/CT-Data-Collaborative/chronic-absenteeism-by-race-ethnicity)
-
 Chronic Absenteeism reports the percentage of chronically absent students during a school year, per subgroup.
 
 Data Source: <http://edsight.ct.gov/>
