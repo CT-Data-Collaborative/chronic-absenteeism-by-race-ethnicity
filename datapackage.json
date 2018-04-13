@@ -2,7 +2,7 @@
   "name": "chronic-absenteeism-by-race-ethnicity",
   "datapackage_version": "1.0-beta.18",
   "title": "Chronic Absenteeism by Race Ethnicity",
-  "description": "Chronic Absenteeism reports the percentage of chronically absent students during a school year, per subgroup.",
+  "description": "Chronic Absenteeism reports the percentage of chronically absent students during a school year, per race-ethnicity.",
   "version": "1.0",
   "licenses": [{
     "url": "http://opendatacommons.org/licenses/pddl/",
@@ -112,6 +112,16 @@
     "subdomain": {
       "ckan_name": "Subdomain",
       "value": "Student Behavior",
+      "type": "string"
+    },
+    "numerator": {
+      "ckan_name": "Numerator",
+      "value": "Total number of chronically absent students, per subgroup.",
+      "type": "string"
+    },
+    "denominator": {
+      "ckan_name": "Denominator",
+      "value": "Total number of students, per subgroup.",
       "type": "string"
     },
     "geography": {
