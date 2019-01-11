@@ -1,4 +1,6 @@
 library(dplyr)
+library(devtools)
+load_all('../datapkg')
 library(datapkg)
 
 ##################################################################
@@ -34,6 +36,7 @@ for (i in 1:length(chronic_absent_dist_noTrend)) {
 
 #Rename statewide data...
 chronic_absent_dist[["District"]][chronic_absent_dist$"District" == "State Level"]<- "Connecticut"
+chronic_absent_dist[["District"]][chronic_absent_dist$"District" == "NOTSET"]<- "Connecticut"
 
 #backfill Districts
 district_dp_URL <- 'https://raw.githubusercontent.com/CT-Data-Collaborative/ct-school-district-list/master/datapackage.json'
@@ -52,7 +55,8 @@ years <- c("2011-2012",
            "2013-2014",
            "2014-2015",
            "2015-2016", 
-           "2016-2017")
+           "2016-2017",
+           "2017-2018")
 
 backfill_years <- expand.grid(
   `FixedDistrict` = unique(districts$`FixedDistrict`),
@@ -120,7 +124,7 @@ test2<-test[duplicated(test), ]
 #Write CSV
 write.table(
   complete_chronic_absent_long,
-  file.path(path_to_top_level, "data", "chronic_absenteeism_by_race_ethnicity_2012-2017.csv"),
+  file.path(path_to_top_level, "data", "chronic_absenteeism_by_race_ethnicity_2012-2018.csv"),
   sep = ",",
   row.names = F
 )
